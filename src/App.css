@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+/* COLORS */
+:root {
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --secondary-orange: #EE9972;
+  --secondary-offwhite: #FBDABB;
+  --secondary-lightgray: #EDEFEE;
+  --secondary-gray: #333333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* FONTS */
+.display-title {
+  font-family: 'Markazi';
+  font-size:64;
+  font-weight:500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sub-title {
+  font-family: 'Markazi';
+  font-size:40;
+  font-weight:400;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.lead-text {
+  font-family: 'Karla';
+  font-size: 18;
+  font-weight:500;
+  color: var(--primary-green);
+}
+
+.section-title {
+  font-family: 'Karla';
+  font-size: 20;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.section-categories {
+  font-family: 'Karla';
+  font-size: 16;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.card-title {
+  font-family: 'Karla';
+  font-size: 18;
+  font-weight:700;
+  text-transform: capitalize;
+}
+
+.paragraph-text {
+  font-family: 'Karla';
+  font-size: 16;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--primary-green);
+}
+
+.highlight-text {
+  font-family: 'Karla';
+  font-size: 16;
+  font-weight: 500;
+  color: var(--primary-green);
+}
+
+
+
+/* STYLE */
+#root {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0;
+  padding-top: 0;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+header ul {
+  display: flex;
+  gap: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header li {
+  display: inline;
+  text-decoration: none;
+}
+
+
+
+footer {
+  background-color: var(--secondary-lightgray);
+}
+
+footer h4 {
+  font-family: 'Karla';
+  size: 18;
+  font-weight: 800;
+  color: var(--primary-green); 
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer li {
+  font-family: 'Karla';
+  size: 18;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.call-to-action {
+  background-color: var(--primary-green);
+  padding-top: 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-yellow);
+  border-radius: 8px;
+  border: none;
+  padding: 0.5rem 1rem;
+}
+
+
+.recipe-card {
+  background-color: var(--secondary-lightgray);
+  width: 250px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+.review-card {
+  flex: 1;
+  background-color: white;
+  padding: 1rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }

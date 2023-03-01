@@ -6,8 +6,10 @@ const Header = () => {
 
     return (
         <header>
-            <img src={logo}></img>
-            <Nav />
+            <div className="container">
+                <img src={logo} alt="logo"></img>
+                <Nav />
+            </div>
         </header>
     );
 }
