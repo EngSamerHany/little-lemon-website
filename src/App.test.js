@@ -1,8 +1,19 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import BookingForm from './components/BookingForm';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+test('Renders the BookingForm heading', () => {
+    render(<BookingForm />);
+    const headingElement = screen.getByText("Booking");
+    expect(headingElement).toBeInTheDocument();
+});
+
+test('Checks updateTimes result when the date is changed', () => {
+  const handleChange = jest.fn();
+  render(<BookingForm />);
+
+  const rangeDate = screen.getByLabelText("/Choose date/");
+  fireEvent.change(rangeDate, { target: { value: '2023-03-20' } });
+  expect(handleChange).toHaveBeenCalled();
 });
